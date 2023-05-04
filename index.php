@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/Models/mouvies.php';
-
+require __DIR__ . '/Models/genres.php';
 
 $the_wolf_of_wall_street = new Mouvies('The Wolf of Wall Street', 2013, 180);
 
