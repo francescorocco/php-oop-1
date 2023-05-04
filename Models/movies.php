@@ -20,16 +20,18 @@ class Movies {
             	$genres_list = '';
 
                 foreach($this->genres as $element){
-                    $genres_list .= '<li>'.$element.'</li>';
+                    $genres_list .= '<li>'.$element->name.'</li>';
                 }
 
             return 
-            '<h1>'. $this->name .'</h1>' . 
-            '<ul>'.
-               $genres_list .
-            '</ul>'.
-            '<h3>'.$this->release_date.'</h3>' .
-            '<p>'.$this->duration.'Minuti'.'</p>';
+            "<div class='card'>".
+                '<h1>'. $this->name .'</h1>' . 
+                '<ul>'.
+                $genres_list .
+                '</ul>'.
+                '<h3>'.$this->release_date.'</h3>' .
+                '<p>'.$this->duration.'Minuti'.'</p>'.
+            "</div>";
         }
 }
 
