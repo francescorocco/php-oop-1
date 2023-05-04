@@ -1,11 +1,22 @@
 <?php
 
-require __DIR__ . '/Models/mouvies.php';
+require __DIR__ . '/Models/movies.php';
 require __DIR__ . '/Models/genres.php';
 
-$the_wolf_of_wall_street = new Mouvies('The Wolf of Wall Street', 2013, 180);
+$twows_genres =  [
+    new Genre('Biografico'),
+    new Genre('Commedia'),
+    new Genre('Drammatico'),
+];
 
-$focus = new Mouvies('Focus', 2015, 104);
+$the_wolf_of_wall_street = new Movies('The Wolf of Wall Street', 2013, $twows_genres, 180);
+
+$focus_genres =[
+    new Genre('Commedia'),
+    new Genre('Drammatico'),
+];
+
+$focus = new Movies('Focus', 2015, $focus_genres ,104);
 
 ?>
 
@@ -22,8 +33,8 @@ $focus = new Mouvies('Focus', 2015, 104);
     <main>
         <div class="container">
             <?php
-            echo $the_wolf_of_wall_street->getFullMouvieInformation();
-            echo $focus->getFullMouvieInformation();
+            echo $the_wolf_of_wall_street->getFullMovieInformation();
+            echo $focus->getFullMovieInformation();
             ?>
         </div>
     </main>
